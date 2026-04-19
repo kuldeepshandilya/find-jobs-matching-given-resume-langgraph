@@ -105,9 +105,9 @@ Above command opens the langsmith UI on your local, where you can provide the in
 #### It uses a real LLM (openAI model). This LLM parses the resume text to figure out skill set, number of year of experience and the most senior role held by the person.
 
 ### What is Not Real(mocked)) in this application
-#### It does not do a real search in job portals with the criteria details received from LLM call (skill sets, years of experience, target job designation) - that is left for you to implement.
+#### It does not perform a real search in job portals using  the criteria details received from LLM call (skill sets, years of experience, target job designation) -  as that is not hard, and the choice of job portal may vary for different users.
 
-You can extend this graph to orchestrate more complex agentic workflows that can be visualized and debugged in LangGraph Studio.
+You can extend this graph to implement an actual, useful ad  complex agentic workflow that can be visualized and debugged in LangGraph Studio.
 
 
 ### Minor Issues and their solution
