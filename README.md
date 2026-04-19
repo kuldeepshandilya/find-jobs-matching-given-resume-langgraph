@@ -7,25 +7,24 @@
 The purpose of this application is to help users have their first meaningful real AI agent up and running on their machine, with minimal steps. Seeing is believing.
 
 ## What this AI Agent Does
-#### Given  a resume, it returns the list of  jobs matching that resume.
+### Given  a resume, it returns the list of  jobs matching that resume.
 
-This AI agent takes input as the entire text of a resume, extracts important info e.g.  skill sets, experience level and the most senior roles held by the person - and returns the list of matching jobs for that resume (roles matching the most senior role occupied and the skill sets mentioned in the resume).
+#### This AI agent takes input as the entire text of a resume, extracts important info e.g.  skill sets, experience level and the most senior roles held by the person - and returns the list of matching jobs for that resume (roles matching the most senior role occupied and the skill sets mentioned in the resume).
 
-This demonstrates a real use case implemented using AI agents to demonstrates how multi-step agentic applications are implemented using [LangGraph](https://github.com/langchain-ai/langgraph), designed for showing how to get started with [LangGraph Server](https://langchain-ai.github.io/langgraph/concepts/langgraph_server/#langgraph-server) and using [LangGraph Studio](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/), a visual debugging IDE.
+#### This demonstrates a real use case implemented using AI agents to demonstrates how multi-step agentic applications are implemented using [LangGraph](https://github.com/langchain-ai/langgraph), designed for showing how to get started with [LangGraph Server](https://langchain-ai.github.io/langgraph/concepts/langgraph_server/#langgraph-server) and using [LangGraph Studio](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/), a visual debugging IDE.
 
 <div align="center">
   <img src="./static/job-search-for-given-resume.png" alt="Graph view in LangGraph studio UI" width="75%" />
 </div>
 
-###
-The core logic is defined in the file `src/agent/graph.py`.
+####  The core logic is defined in the file `src/agent/graph.py`.
 
 ### Prerequisites
 Below are the minimum requirements to run this on your local machine -
 
 #### 1.  Docker (Install Docker on your local from - https://docs.docker.com/engine/install/ )
 #### 2.  API Keys
-##### Since we need a real AI (LLM), and this application uses Open AI models (for simplicity). Signup is free, very minimal cost(token cost) is incurred when you run your application -
+##### We need a LLM. For simplicity, this application uses Open AI models. Signup is free, very minimal cost(token cost) is incurred when you run your application -
 #### a. Signup to open AI - https://platform.openai.com/home
 #### b. Create an API key at https://platform.openai.com/settings/organization/api-keys
 #### c. Assign the API key value to the variable 'OPENAI_API_KEY' in the file .env i.e.
