@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+.idea
+.langgraph_api
+agent.egg-info
+
 # C extensions
 *.so
 
