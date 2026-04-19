@@ -1,10 +1,10 @@
-# New LangGraph Project
+# LangGraph Based AI Agent
 
 [![CI](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/unit-tests.yml)
 [![Integration Tests](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/integration-tests.yml)
 
 ## Goal
-The purpose of this application is to help users have their first meaningful real AI agent up and running on their machine, with minimal steps. Seeing is believing.
+### Purpose of this application is to help users have their first meaningful AI agent up and running on their machine, with minimal steps.
 
 ## What this AI Agent Does
 ### Given  a resume, it returns the list of  jobs matching that resume.
@@ -28,12 +28,15 @@ Below are the minimum requirements to run this on your local machine -
 #### a. Signup to open AI - https://platform.openai.com/home
 #### b. Create an API key at https://platform.openai.com/settings/organization/api-keys
 #### c. Assign the API key value to the variable 'OPENAI_API_KEY' in the file .env i.e.
-##### OPENAI_API_KEY=<API key created in step b).
+```bash
+OPENAI_API_KEY=<API key created in step b).
+```
 #### d. To visualise the input/ouput/logs etc of the application, sign-up to Langsmith (https://smith.langchain.com/),
 #### e. Create an API key in Langsmith (Go to settgins page  https://smith.langchain.com/settings  and click on API keys),
 ##### f. Assign the API key value to the variable 'LANGSMITH_API_KEY' in the file .env i.e.
-#### LANGSMITH_API_KEY=<API key created in step e).
-
+```bash
+LANGSMITH_API_KEY=<API key created in step e).
+```
 ## Running the application
 
 ### Docker way (Simplest)
