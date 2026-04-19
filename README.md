@@ -116,9 +116,9 @@ You can extend this graph to implement an actual, useful ad  complex agentic wor
 Port 2024 is already in use. Please specify a different port or omit the port argument to auto-discover an available one.
 ```
 
-#### Solution - Release the port (This command is for Mac/Linux, please check corresponding Windows command if you are using Windows)
+#### Solution - Release the port (This command is for Mac/Linux, please check corresponding Windows command if you are on Windows)
 ```bash
-kill -9 $(lsof -t -i:2824)
+kill -9 $(lsof -t -i:2024)
 ```
 It should show  below response in case of success
 ```bash
