@@ -29,13 +29,13 @@ Below are the minimum requirements to run this on your local machine -
 #### b. Create an API key at https://platform.openai.com/settings/organization/api-keys
 #### c. Assign the API key value to the variable 'OPENAI_API_KEY' in the file .env i.e.
 ```bash
-OPENAI_API_KEY=<API key created in step b).
+OPENAI_API_KEY=<API key created in step b>.
 ```
 #### d. To visualise the input/ouput/logs etc of the application, sign-up to Langsmith (https://smith.langchain.com/),
 #### e. Create an API key in Langsmith (Go to settings page  https://smith.langchain.com/settings  and click on API keys),
 ##### f. Assign the API key value to the variable 'LANGSMITH_API_KEY' in the file .env i.e.
 ```bash
-LANGSMITH_API_KEY=<API key created in step e).
+LANGSMITH_API_KEY=<API key created in step e>
 ```
 ## Running the application
 
@@ -146,4 +146,9 @@ To Know models supported for your Open AI API Key, use the command -
 
 ```bash
 curl https://api.openai.com/v1/models -H "Authorization: Bearer <YOUR_OPEN_AI_API_KEY>"
+```
+
+Modify the value of the property MODEL_NAME in the file '.env', with one of the model returned from the above command
+```bash
+MODEL_NAME=<mode name from above command>
 ```
