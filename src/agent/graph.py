@@ -12,11 +12,12 @@ from langchain.chat_models import init_chat_model
 from langchain.tools import tool
 from langgraph.graph import StateGraph, START, END
 from pydantic import BaseModel, Field
+import os
 
 # ---------------------------
 # Model
 # ---------------------------
-MODEL_NAME = "gpt-3.5-turbo-0125"
+MODEL_NAME = os.getenv("MODEL_NAME")
 
 model = init_chat_model(
     MODEL_NAME,

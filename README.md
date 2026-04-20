@@ -4,9 +4,9 @@
 [![Integration Tests](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/langchain-ai/new-langgraph-project/actions/workflows/integration-tests.yml)
 
 ## Goal
-### Purpose of this application is to help users have their first meaningful AI agent up and running on their machine, with minimal steps.
+### 🔑 Purpose of this application is to help users have their first meaningful AI agent up and running on their machine, with minimal steps.
 
-## What this AI Agent Does
+## 🚀 What this AI Agent Does
 ### Given  a resume, it returns the list of  jobs matching that resume.
 
 #### This AI agent takes input as the entire text of a resume, extracts important info e.g.  skill sets, experience level and the most senior roles held by the person - and returns the list of matching jobs for that resume (roles matching the most senior role occupied and the skill sets mentioned in the resume).
@@ -32,7 +32,7 @@ Below are the minimum requirements to run this on your local machine -
 OPENAI_API_KEY=<API key created in step b).
 ```
 #### d. To visualise the input/ouput/logs etc of the application, sign-up to Langsmith (https://smith.langchain.com/),
-#### e. Create an API key in Langsmith (Go to settgins page  https://smith.langchain.com/settings  and click on API keys),
+#### e. Create an API key in Langsmith (Go to settings page  https://smith.langchain.com/settings  and click on API keys),
 ##### f. Assign the API key value to the variable 'LANGSMITH_API_KEY' in the file .env i.e.
 ```bash
 LANGSMITH_API_KEY=<API key created in step e).
@@ -40,7 +40,7 @@ LANGSMITH_API_KEY=<API key created in step e).
 ## Running the application
 
 ### Docker way (Simplest)
-#### 1. Build Docker Image (run below command after downloading and extracting the zip code from this repo -
+#### 1. Build Docker Image  - run below command after downloading and extracting the zip code from this repo -
 ```bash
  docker build -t resume-to-job-agent .
 ```
@@ -99,7 +99,14 @@ pip install --no-cache-dir -r requirements.txt
 langgraph dev --allow-blocking
 ```
 
-Above command opens the langsmith UI on your local, where you can provide the input (paste entire text from your resume doc) to the field 'resume_text', and get the output
+### Above command opens the langsmith UI on your local, where you can provide the input (paste entire text from your resume doc) to the field 'resume_text', and get the output
+
+In the field 'resume_text', paste entire text from your resume, and submit - 
+
+<div align="center">
+  <img src="./static/passing-input-to-agent.png" alt="Passing resume text as input to the agent"/>
+</div>
+
 
 ### What is Real in this application
 #### It uses a real LLM (openAI model). This LLM parses the resume text to figure out skill set, number of year of experience and the most senior role held by the person.
@@ -111,7 +118,7 @@ You can extend this graph to implement an actual, useful ad  complex agentic wor
 
 
 ### Minor Issues and their solution
-#### Problem - Start-up failing (in non Docker way) with below error
+#### Problem 1 - Start-up failing (in non Docker way) with below error
 ```bash
 Port 2024 is already in use. Please specify a different port or omit the port argument to auto-discover an available one.
 ```
@@ -127,4 +134,18 @@ kill: not enough arguments
 Now start the application, it should start -
 ```bash
 langgraph dev --allow-blocking
+```
+
+#### Problem 2 - Not having permission to use the model defined in .env file
+You may get error like below -
+
+```bash
+proj_J<project_id>> does not have access to model gpt-3.5-turbo-0125
+```
+
+The fix is to use right model (Your Open AI API key may not have access to the model used in this code.
+To Know models supported for your Open AI API Key, use the command - 
+
+```bash
+curl https://api.openai.com/v1/models -H "Authorization: Bearer <YOUR_OPEN_AI_API_KEY>"
 ```
